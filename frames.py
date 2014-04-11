@@ -82,7 +82,7 @@ class main_frame ( wx.Frame ):
 		
 		bSizer28 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.output_folder_box = wx.TextCtrl( self.m_panel1, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_DONTWRAP|wx.TE_NO_VSCROLL )
+		self.output_folder_box = wx.TextCtrl( self.m_panel1, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_NO_VSCROLL )
 		bSizer28.Add( self.output_folder_box, 0, wx.ALL|wx.EXPAND, 5 )
 		
 		

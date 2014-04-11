@@ -23,6 +23,7 @@ def FilePreview(textCtrl, filename):
     textCtrl.SetLabel('')
     textCtrl.AppendText(y)
     
+    
 def Splitter(filename, outputPath, num, textCtrl, progress_bar, split_button):
     try :
         num = int(num)
@@ -79,6 +80,7 @@ def GetFileSize(filepath):
                 x = round(x/1024, 2)
                 y='GB'
     return str(x) + ' ' + y
+
 
 def GetNumberOfLines(textCtrl, filepath):
     if textCtrl != None:
