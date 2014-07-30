@@ -8,12 +8,12 @@ import wx
 def OnOpenFile(parent):
     y = wx.FileDialog(parent, 'Open File', wildcard = 'Text file (*.txt)|*.txt|All files (*.*)|*.*', style = wx.FD_OPEN | wx.FD_FILE_MUST_EXIST | wx.FD_CHANGE_DIR, pos = wx.DefaultPosition)
     if y.ShowModal() == wx.ID_OK:
-        return y.GetPath()
+        return y.GetPath()                          #Returns the path of the selected file
 
 def OnSelectFolder(parent):
     y = wx.DirDialog(parent, 'Select Output Folder', style = wx.DEFAULT_DIALOG_STYLE | wx.DD_CHANGE_DIR, pos = wx.DefaultPosition, name = 'Boomshine')
     if y.ShowModal() == wx.ID_OK:
-        return y.GetPath()
+        return y.GetPath()                          #Returns the path of the selected folder
     
 def TextCtrlWriter(textCtrl, filename):
     with open(filename, 'r') as fileobject:
@@ -28,6 +28,6 @@ def debug():
     print OnOpenFile(None)
     print OnSelectFolder(None)
 
-#if __name__ == "__main__":
-    #print 'starting debug'
-    #debug()
+if __name__ == "__main__":
+    print 'starting debug'
+    debug()
