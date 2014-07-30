@@ -36,4 +36,4 @@ if __name__ == '__main__':
     except Exception, e:
         print str(e)+'\nRestart Program.'
         exit()
-    main(filename, num)
+    main(filename, int(num))
