@@ -27,7 +27,7 @@ def FilePreview(textCtrl, filename):
 def Splitter(filename, outputPath, num, textCtrl, progress_bar, split_button):
     try :
         num = int(num)
-        lines = GetNumberOfLines(None, filename)
+        lines = Get_Number_Of_Lines(None, filename)
         filepath = filename
         filename = FileNameExtractor(filename)
         i, c = 1, 1
@@ -79,7 +79,7 @@ def GetFileSize(filepath):
             if x > 1024:
                 x = round(x/1024, 2)
                 y='GB'
-    return str(x) + ' ' + y
+    return ' '.join(str(x), y)
 
 
 def GetNumberOfLines(textCtrl, filepath):
